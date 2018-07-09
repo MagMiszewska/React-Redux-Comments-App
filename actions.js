@@ -1,10 +1,10 @@
 import uuid from uuid;
 
-const ADD_COMMENT = 'ADD_COMMENT';
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const REMOVE_COMMENT = 'REMOVE_COMMENT';
-const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
-const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
+export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 function addComment(text) {
     return {
@@ -42,12 +42,3 @@ function thumbDownComment(id) {
         id
     }
 }
-
-const boundAddComment = text => dispatch(addComment(text));
-const boundEditComment = text => dispatch(editComment(text, id));
-const boundRemoveComment = id => dispatch(removeComment(id));
-const boundThumbUpComment = id => dispatch(thumbUpComment(id));
-const boundThumbDownComment = id => dispatch(thumbDownComment(id));
-
-boundAddComment('nowy komentarz!');
-boundAddComment('kolejny nowy komentarz!');
